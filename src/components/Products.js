@@ -1,15 +1,16 @@
 import React from "react";
 import { Link, Route, useRouteMatch } from "react-router-dom";
-import { productData } from "../constants/products";
+// import { productData } from "../constants/products";
+import { productList } from "../constants/products-list";
 import Product from "./Product";
 
 const Products = () => {
   const { url } = useRouteMatch();
 
-  const linksList = productData.map((product) => {
+  const linksList = productList.map((product) => {
     return (
-      <li key={product.id}>
-        <Link to={`${url}/${product.id}`}>{product.name}</Link>
+      <li key={product.ProductID}>
+        <Link to={`${url}/${product.SKU}`}>{product.Name}</Link>
       </li>
     );
   });
@@ -24,7 +25,7 @@ const Products = () => {
       </div>
 
       <Route path={`${url}/:productId`}>
-        <Product data={productData} />
+        <Product data={productList} />
       </Route>
       <Route exact path={url}>
         <h4 className="no-product-selected">No product selected!</h4>

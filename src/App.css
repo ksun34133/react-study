@@ -81,12 +81,20 @@
   padding: 5px 0px 0px;
   width: 40%;
   background-color: #e9ecef;
+  max-height: 400px;
+  overflow: auto;
 }
-
 .products_list h3 {
   text-align: center;
 }
-
+.products_list ul {
+  padding-left: 15px;
+}
+.products_list li {
+  border-bottom: 1px solid #cecece;
+  padding-bottom: 5px;
+  list-style-type: none;
+}
 .products_list a:hover,
 .products_list a:focus,
 .products_list a:active {
@@ -104,14 +112,15 @@
   padding: 0px 10px;
 }
 .product-detail {
-  margin: auto;
+  margin: 10px;
   background-color: #ffffff;
 }
 .product-detail h4 {
   font-size: 18px;
 }
 .product-detail h5 {
-  font-size: 16px;
+  font-size: 15px;
+  font-weight: normal;
 }
 .product-detail p {
   font-size: 14px;
